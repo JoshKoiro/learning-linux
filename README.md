@@ -16,14 +16,21 @@ Make sure to unselect "Debian desktop environment" as well as the default GNOME 
 Make sure to select the top "Debian desktop environment" from the top of the list as well as which desktop environment version to install (GNOME is default)
 
 ## Using VMWare - Networking
-When you right click on teh virtual machine (or are setting it up for the first time) you must select the network adapter and choose VMnet0 from the "Custom" option for network connections. VMnet0 is a bridged network so it will show up on your network that the host computer is connected to.
+When you right click on the virtual machine (or are setting it up for the first time) you must select the network adapter and choose VMnet0 from the "Custom" option for network connections. VMnet0 is a bridged network so it will show up on your network that the host computer is connected to.
 ![VM Network Settings](images/vmNetworkSettings.png)
+
+## Install Nala package manager
+Nala is a package manger that replaces apt. It is much easier to manage and download dependencies as well as see problems before they occur.
+
+`sudo apt install nala`
+
+now any installation can be done through nala (`sudo nala install <PACKAGE NAME>`)
 
 ## Establishing SSH connection
 
 Run this command to install open ssh:
 
-`sudo apt install openssh-server`
+`sudo nala install openssh-server`
 
 Check the service is running by running this command:
 
@@ -64,7 +71,7 @@ reboot using the following command:
 
 ## Connecting to the GUI over LAN
 
-`sudo apt install xrdp`
+`sudo nala install xrdp`
 
 `sudo systemctl enable xrdp`
 
@@ -74,7 +81,7 @@ reboot using the following command:
 
 Neovim is a version of vim that is better suited to extendability using plugins written in the Lua language. vi comes pre-installed with debian but if you plan to do any kind of programming or lots of text editing via the terminal, it might be helpful to have available.
 
-`sudo apt-get install neovim`
+`sudo nala install neovim`
 
 # Dotfile Backup
 In this section, we will discuss the methods and commands required to create a system configuration backup using the --bare git repo method.
@@ -157,5 +164,15 @@ Alternatively, if you're setting up a new branch on the repo, you can configure 
 
 `dotfile push --set-upstream origin <BRANCH NAME>`
 
+# Installing Applications
 
+## BTop
+
+BTop is a cleaner and more powerful implementation of the standard `top` command which provides process statistics in the terminal. btop provides a more intuitive view to be able to monitor processes and computer performance.
+
+Install with this command
+`sudo nala install btop`
+
+Run with this command
+`btop`
 
