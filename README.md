@@ -176,3 +176,22 @@ Install with this command
 Run with this command
 `btop`
 
+# Installing flatpak
+Flatpak is a repository of applications that are isolated and updated for Linux.
+Reference: https://www.youtube.com/watch?v=K72XJHurdUY
+
+This command will install flatpak
+`sudo nala install flatpak`
+
+If you are running the GNOME desktop environment then this other installation is required as well.
+`sudo nala install gnome-software-plugin-flatpak `
+
+Add the flathub repository for flatpak.
+`sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+# Remove Firefox ESR
+Firefox ESR is an outdated version of firefox that ships with Debian. It is important to uninstall this so that we can install a different browser like Vivaldi from the software store.
+
+`sudo nala remove firefox-esr`
+
+Once firefox is installed and you want to install another browser, you may need to restart your computer prior to seeing it show up as an application in the list of applications.
