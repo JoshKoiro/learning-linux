@@ -110,7 +110,12 @@ dotfile add .vimrc
 dotfile commit -m "add vimrc"
 ```
 
-Now, before you push, you must authenticate the instance of git to push the changes to github. There are several ways of doing this, but the way that I'm going to describe below is using a personal access token over https. (see [Authenticating Git](#Authenticating-Git) below)
+Now, before you push, you must authenticate the instance of git to push the changes to github. There are several ways of doing this. The best way to do this is by using my [github-ssh](https://github.com/JoshKoiro/github-ssh) repo. This can be done easily by running the following command to execute the script and following the prompts. (Note, this will require you to create a new SSH token on Github during the process)
+```
+/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/github-ssh/main/config.sh)"
+```
+
+Alternatively, you can also use a personal access token over https. (see [Authenticating Git Using Personal Access Token](#Authenticating-Git-Using-Personal-Access-Token) below)
 
 ## Removing items from the dotfile repo
 
@@ -130,7 +135,7 @@ This command creates a new branch as a copy of the current working HEAD in the G
 
 To switch between different branches, use the `dotfile checkout <BRANCH NAME>` command.
 
-## Authenticating Git
+## Authenticating Git Using Personal Access Token
 
 Next, we are going to set up authentication on the system to allow us to push changes to our dotfiles to Github.
 
