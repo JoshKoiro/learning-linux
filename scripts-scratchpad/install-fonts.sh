@@ -1,0 +1,1 @@
+# Jet Brains Nerd Font Mono
