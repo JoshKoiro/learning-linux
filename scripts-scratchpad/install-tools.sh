@@ -13,11 +13,13 @@ sudo pacman -S npm
 sudo pacman -S nvtop
 sudo pacman -S unzip
 sudo pacman -S yazi
+sudo pacman -S eza
+
+# Package Managers
+sudo pacman -S yay
+sudo pacman -S flatpak
 
 # Applications
-
-    # install flatpak
-    sudo pacman -S flatpak
 
     # install zen via flatpak
     flatpak install flathub app.zen_browser.zen
