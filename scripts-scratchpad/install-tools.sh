@@ -3,6 +3,7 @@
 sudo pacman -S btop
 sudo pacman -S curl
 sudo pacman -S wget
+sudo pacman -S fzf
 sudo pacman -S neofetch
 sudo pacman -S fastfetch
 sudo pacman -S ffmpeg
@@ -34,6 +35,7 @@ sudo pacman -S yazi
     flatpak install flathub com.vivaldi.Vivaldi
 
 # Developer Tools
+sudo pacman -S git
 sudo pacman -S nodejs
 sudo pacman -S npm
 sudo pacman -S neovim

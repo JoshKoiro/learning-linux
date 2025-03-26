@@ -1,0 +1,31 @@
+[color "decorate"]
+    HEAD   = bold blink italic 196
+    branch = 214
+    tag    = bold 222
+
+[alias]
+l = log --oneline --decorate --all --graph
+
+ll = log --graph --decorate --pretty="short" -n, --max-count=14
+
+c = commit
+
+s = status
+
+rename = commit --amend -m
+
+# number of commits
+
+Ncommits = rev-list --all --count
+
+# add and review diff
+
+ad = add -p
+
+[user]
+	name = JoshKoiro
+	email = 
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
