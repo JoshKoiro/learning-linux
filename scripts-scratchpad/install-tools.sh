@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Necessary Packages
 
 sudo pacman -S btop
